@@ -1,0 +1,11 @@
+Option Explicit
+
+Sub AutoFitAllLines()
+'FR 20200603 0828
+'This macro will set the row height to 1 for all tasks in the project
+
+    Dim i As Long
+    For i = 1 To ActiveProject.Tasks.Count
+        SetRowHeight Unit:=1, Rows:=i
+    Next i
+End Sub
